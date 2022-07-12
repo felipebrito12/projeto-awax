@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.container{
+  display: flex;
+  max-width: 1140px;
+  margin: auto;
+}
+
+
+
+/*Configurações do Cabeçalho*/
+
+header{
+  height: 100px;
+  background-color: #000;
+}
+
+header .container{
+  height: 100px;
+  align-items: center;
+}
+
+.logo{
+  display: flex;
+  color: #b98a5c;
+  width: 80px;
+  height: 80px;
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 40px;
+  border: 3px solid #b98a5c;
+  border-radius: 40px;
+}
+
+.menu {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.menu ul, li{ /*Alinha os links que estão na lista*/
+  display: flex;
+}
+
+.menu a{
+  display: flex; /*coloca em flex pra facilitar a personalização*/
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  height: 100px;
+  align-items: center;
+  border-bottom: 3px solid #000; /*Evita que o menu "salte" quando o mouse passar por cima*/
+
+  padding: 0 6px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+#selected, .menu a:hover {
+  border-bottom: 3px solid #b98a5c;
+  transition-duration: 0.2s;
+
+}
+
+/*Primeira section - home*/
+
+#home{
+  background-image: url(../complementos/bg.jpg);
+  background-size: cover;
+  height: calc(100vh - 100px);
+  background-position: bottom;
+}
+
+.fundo{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.574);
+  height: 100%;
+}
+
+.home-content{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.home-content h1{
+  font-weight: bold;
+  font-size: 50px;
+
+  line-height: 50px;
+}
+
+.home-content h1 span{
+  color: #b98a5c;
+}
+
+.home-content h2{
+  margin: 13px 0;
+  font-size: 17px;
+}
+
+.home-content a{
+  background-color: #b98a5c;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+  padding: 18px 52px;
+  margin-top: 30px;
+  border-radius: 30px;
+}
+
+.home-content a:hover{
+  background-color: #fff;
+  color: #b98a5c;
+
+  transition-duration: 0.2s;
+}
+
+.slide{
+  height: 100px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide .selected{
+  background-color: #b98a5c;
+}
+
+.slide-circle{
+  width: 16px;
+  height: 16px;
+  border: 2px solid #b98a5c;
+  border-radius: 8px;
+  margin: 0 3px;
+}
+
+.slide-circle:hover{
+  cursor: pointer;
+}
