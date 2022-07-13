@@ -9,11 +9,21 @@
 
   font-family: "Montserrat", sans-serif;
 }
+:root{
+  --cor1: #b98a5c;
+  --cor2: #ffffff;
+  --cor3: #aeaeae;
+  --cor4: #000000;
+  --cor5: #f7f7f7;
+}
+
+
 
 .container{
   display: flex;
   max-width: 1140px;
   margin: auto;
+  height: 100%; /*vai tomar o tamanho inteiro da section que tiver*/
 }
 
 
@@ -21,18 +31,19 @@
 /*Configurações do Cabeçalho*/
 
 header{
+  justify-content: center;
   height: 100px;
-  background-color: #000;
+  background-color: var(--cor4);
 }
 
 header .container{
-  height: 100px;
   align-items: center;
+  justify-content: center;
 }
 
 .logo{
   display: flex;
-  color: #b98a5c;
+  color: var(--cor1);
   width: 80px;
   height: 80px;
 
@@ -40,7 +51,7 @@ header .container{
   align-items: center;
 
   font-size: 40px;
-  border: 3px solid #b98a5c;
+  border: 3px solid var(--cor1);
   border-radius: 40px;
 }
 
@@ -56,13 +67,13 @@ header .container{
 
 .menu a{
   display: flex; /*coloca em flex pra facilitar a personalização*/
-  color: #fff;
+  color: var(--cor2);
   text-decoration: none;
   text-transform: uppercase;
 
   height: 100px;
   align-items: center;
-  border-bottom: 3px solid #000; /*Evita que o menu "salte" quando o mouse passar por cima*/
+  border-bottom: 3px solid var(--cor4); /*Evita que o menu "salte" quando o mouse passar por cima*/
 
   padding: 0 6px;
   font-weight: 600;
@@ -70,17 +81,17 @@ header .container{
 }
 
 #selected, .menu a:hover {
-  border-bottom: 3px solid #b98a5c;
+  border-bottom: 3px solid var(--cor1);
   transition-duration: 0.2s;
 
 }
 
-/*Primeira section - home*/
+/*Primeira seção - home*/
 
 #home{
   background-image: url(../complementos/bg.jpg);
   background-size: cover;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 100px); /*tamanho da tela do usuário menos o tamanho do header*/
   background-position: bottom;
 }
 
@@ -93,13 +104,18 @@ header .container{
 
 .home-content{
   display: flex;
-  flex: 1;
+  flex: 1; /*para preencher todo o espaço restante depois do slide*/
   flex-direction: column;
   align-items: center;
   justify-content: center;
   
   text-transform: uppercase;
-  color: #fff;
+  color: var(--cor2);
+}
+.home-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .home-content h1{
@@ -110,7 +126,7 @@ header .container{
 }
 
 .home-content h1 span{
-  color: #b98a5c;
+  color: var(--cor1);
 }
 
 .home-content h2{
@@ -119,8 +135,8 @@ header .container{
 }
 
 .home-content a{
-  background-color: #b98a5c;
-  color: #fff;
+  background-color:var(--cor1);
+  color: var(--cor2);
   font-size: 13px;
   font-weight: 600;
 
@@ -131,28 +147,27 @@ header .container{
 }
 
 .home-content a:hover{
-  background-color: #fff;
-  color: #b98a5c;
+  background-color: var(--cor2);
+  color: var(--cor1);
 
   transition-duration: 0.2s;
 }
 
 .slide{
   height: 100px;
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .slide .selected{
-  background-color: #b98a5c;
+  background-color: var(--cor1);
 }
 
 .slide-circle{
   width: 16px;
   height: 16px;
-  border: 2px solid #b98a5c;
+  border: 2px solid var(--cor1);
   border-radius: 8px;
   margin: 0 3px;
 }
@@ -160,3 +175,49 @@ header .container{
 .slide-circle:hover{
   cursor: pointer;
 }
+
+/*Segunda seção - about us*/
+
+.column{
+  flex-direction: column;
+}
+
+#about-us{
+  height: 532px;
+}
+
+.default{
+  padding: 40px 0;
+  display: flex;
+  width: 100%;
+  background-color: var(--cor5);
+  flex-direction: column;
+  align-items: center;
+}
+
+.default-title h1, .default-desc h2{
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.default-title h1{
+  font-size: 21px;
+}
+
+.default-desc h2{
+  color: var(--cor3);
+  font-size: 11px;
+  margin-top: 7px;
+}
+
+.default-body{
+  margin-top: 50px;
+}
+
+.default.dark{
+  background-color: var(--cor4);
+}
+
+.default.dark .default-title h1, .default.default.dark .default-body{
+  color: var(--cor2);
+}
+
