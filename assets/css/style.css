@@ -149,9 +149,10 @@ header .container{
   border-radius: 30px;
 }
 
-.home-content a:hover{
+.button:hover{
   background-color: var(--cor2);
   color: var(--cor1);
+  border: 1px solid var(--cor1);
 
   transition-duration: 0.2s;
 }
@@ -210,6 +211,8 @@ header .container{
 
 .default-body{
   margin-top: 50px;
+  width: 100%;
+  display: flex;
 }
 
 .dark .default.dark, .default.dark .default-title h1, .default.dark .default-body{
@@ -224,9 +227,6 @@ header .container{
 
 
 /*Segunda seção - about us*/
-#about-us{
-  height: 532px;
-}
 
 #about-us .default-body{
   display: flex;
@@ -252,13 +252,12 @@ header .container{
 
 /*Terceira seção - Services*/
 #services{
-    background-color: var(--cor4);
-  height: 416px;
+  background-color: var(--cor4);
+
 }
 
 #services .default-body{
   display: flex;
-  width: 100%;
 }
 
 .services-box{
@@ -286,3 +285,104 @@ header .container{
   color: var(--cor6);
   padding-top: 10px;
 }
+
+
+/* Quarta seção - our projects */
+
+#our-projects .default-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-menu{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.projects-menu ul, .projects-menu li{
+  display: inline-block;
+  list-style: none;
+}
+
+.projects-menu ul{
+  background-color: #ededed;
+  border: 2px solid #cfcfcf ;
+  border-radius: 30px;
+  padding: 0 20px;
+}
+
+.projects-menu li{
+  display: inline-block;
+  padding: 10px; 
+  text-transform: uppercase;
+  font-size: 13px;
+  border-bottom: 3px solid transparent;
+  border-left: 1px solid #cfcfcf ;
+}
+
+.projects-menu li:first-child{
+  border-left: none;
+}
+
+.projects-menu li:hover, .projects-menu .selected{
+  border-bottom: 3px solid var(--cor1);
+  cursor: pointer;
+}
+
+
+.projects-photos-geral{
+  justify-content: center;
+  display: flex;  
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.projects-photo{
+  width: 255px;
+}
+
+.projects-photoarea{ /* cria uma área da imagem e da descrição*/
+  margin: 10px;
+  width: 235px;
+  height: 135px;
+}
+
+.projects-photoarea img{
+  width: inherit;
+  height: inherit;
+}
+
+.photoarea-info{
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+
+  width: inherit; /*Limira o tamanho ao mesmo do photoarea*/
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.625);
+  padding: 10px;
+  
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.photoarea-info h1{
+  font-size: 15px;
+}
+
+.photoarea-info p{
+  font-size: 11px;
+}
+
+.projects-photoarea:hover .photoarea-info{
+  opacity: 1;
+  transition-duration: .3s;
+  backdrop-filter: blur(1px);
+}
+
+/* Quinta seção - Our Team */
+
