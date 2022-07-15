@@ -146,6 +146,7 @@ header .container{
   text-transform: uppercase;
   padding: 18px 52px;
   margin-top: 30px;
+  border: 1px solid var(--cor1);
   border-radius: 30px;
 }
 
@@ -216,9 +217,13 @@ header .container{
 }
 
 .dark .default.dark, .default.dark .default-title h1, .default.dark .default-body{
-  background-color: var(--cor4);
   color: var(--cor2);
 }
+
+.flex{
+  display: flex;
+}
+
 
 
 
@@ -366,15 +371,16 @@ header .container{
   padding: 10px;
   
   color: #fff;
-  text-transform: uppercase;
   text-align: center;
 }
 
 .photoarea-info h1{
+  text-transform: uppercase;
   font-size: 15px;
 }
 
 .photoarea-info p{
+  padding: 10px;
   font-size: 11px;
 }
 
@@ -385,4 +391,60 @@ header .container{
 }
 
 /* Quinta seção - Our Team */
+
+#our-team{
+  background-image: url(../complementos/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#our-team .default{
+  padding: 40px 0 0 0;
+}
+
+.workers-area{
+  background-color: #fff;
+  padding: 50px;
+  color: #000;
+  text-align: center;
+  margin: 10px;
+
+  border-radius: 4px;
+}
+
+.workers-info{
+  margin-bottom: 10px;
+  padding: 35px 0;
+}
+
+.workers-info h1{
+  font-weight: 500;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.workers-info h2{
+  font-weight: 400;
+  font-size: 14px;
+} 
+
+.social-icon{
+  display: flex;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: #bebebe;
+  margin: 10px 3px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.social-icon:hover, .social-icon.selected{
+  background-color: var(--cor1);
+  cursor: pointer;
+  transition-duration: .3s;
+}
+
+
+
 
