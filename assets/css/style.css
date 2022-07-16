@@ -650,3 +650,107 @@ header .container{
   color: var(--cor3);
   font-size: 15px;
 }
+
+/* Décima primeria - redes */
+
+#redes{
+  border-bottom: 1px solid var(--cor6);
+}
+
+#redes .container{
+  padding: 20px;
+  justify-content: center;
+
+}
+
+.share{
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+
+  text-transform: uppercase;
+  color: var(--cor3);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.share-img {
+  padding-right: 10px;
+}
+
+.redes-area{
+  display: flex;
+  align-items: center;
+
+  color: var(--cor3);
+  font-size: 12px;
+  font-weight: 700;
+
+}
+
+.redes-logo{
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.redes-logo p{
+  margin-left: 8px;
+}
+
+
+/* décima segunda - contact us */
+
+#contact-us .default-body{
+  display: flex;
+  justify-content: center;
+}
+.form{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
+.form label{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+}
+
+.form input{
+  padding: 5px;
+  margin-top: 7px;
+}
+
+.form label:nth-child(1), .form label:nth-child(2){
+  width: 50%;
+}
+
+.form label:nth-child(3), .form label:last-child{
+  width: 100%;
+}
+
+.form label p{
+  color: var(--cor6);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.form label input{
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--cor6);
+}
+
+.form textarea{
+  margin-top: 5px;
+  height: auto;
+  resize: none;  
+  border: none;
+  border-bottom: 1px solid var(--cor6)  ;
+  padding: 10px;
+  background-color: transparent;
+  line-height: 23px;
+  font-size: 15px;
+}
