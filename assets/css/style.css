@@ -407,7 +407,7 @@ header .container{
   background-color: transparent;
 }
 
-#our-team .default-body{
+#our-team .default-body, #our-team .default-title{
   background-color: transparent;
 }
 
@@ -753,4 +753,117 @@ header .container{
   background-color: transparent;
   line-height: 23px;
   font-size: 15px;
+}
+
+.form textarea:focus, .form input:focus{
+  outline: 0;
+}
+
+/* décima terceira - map */
+
+#map{
+  background-image: url(../complementos/map.png);
+  background-position: right ;
+  background-size: cover;
+}
+
+#map .fundo{
+  background-color: rgba(0, 0, 0, 0.197);
+  display: block;
+}
+#map .container{
+  padding: 30px;
+}
+
+.map-area{
+  background-color: #fff;
+  width: 50%;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.map-item{
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
+
+.map-item p{
+  color: var(--cor6);
+  font-size: 14px;
+}
+
+.map-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: var(--cor6);
+  margin-right: 10px;
+}
+
+/* footer */
+
+footer .container{
+  padding: 30px;
+}
+.footer-area{
+  flex: 1;
+}
+
+.footer-area p{
+  color: var(--cor6);
+  line-height: 20px;
+  font-size: 15px;
+}
+
+.footer-redes{
+  display: flex;
+}
+
+.footer-rede-icon{
+  background-color: var(--cor7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  
+  margin-right: 10px;
+}
+
+.footer-rede-icon:hover, .footer-rede-icon.selected{
+  background-color: var(--cor1);
+  cursor: pointer;
+}
+
+.footer-email-area{
+  background: var(--cor7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+}
+.footer-email-area input{
+  padding: 10px 10px 3px 10px;
+  background-color: var(--cor7);
+  border: none;
+  border-bottom: 1px solid var(--cor3);
+}
+
+.footer-email-area input::placeholder{
+  text-transform: uppercase;
+}
+
+.footer-email-area input:focus{
+  outline: 0;
+}
+
+.footer-email-area a{
+  padding: 10px 20px;
+  margin-top: 10px;
 }
