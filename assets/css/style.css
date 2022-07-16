@@ -215,7 +215,8 @@ header .container{
   width: 100%;
 }
 
-.dark .default.dark, .default.dark .default-title h1, .default.dark .default-body{
+.dark, .default.dark, .default.dark .default-title, .default.dark .default-body{
+  background-color: #000;
   color: var(--cor2);
 }
 
@@ -403,7 +404,14 @@ header .container{
 
 #our-team .default{
   padding: 40px 0 0 0;
+  background-color: transparent;
 }
+
+#our-team .default-body{
+  background-color: transparent;
+}
+
+
 
 .workers-area{
   background-color: #fff;
@@ -603,4 +611,42 @@ header .container{
 
 .book-feature li::before{
   content: "-";
+}
+
+/* Décima seção - Some Facts */
+
+.facts-area{
+  display: flex;
+}
+.facts-desc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  margin: 10px;
+}
+
+.facts-desc h1{
+  color: var(--cor1);
+  font-size: 50px;
+}
+
+.facts-bar{
+  margin: 14px 0 10px 0;
+  width: 20px;
+  height: 4px;
+  background-color: #7d7d7d;
+}
+
+.facts-desc h2{
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.facts-desc p{
+  color: var(--cor3);
+  font-size: 15px;
 }
