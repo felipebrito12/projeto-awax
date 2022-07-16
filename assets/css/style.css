@@ -213,11 +213,14 @@ header .container{
 .default-body{
   margin-top: 50px;
   width: 100%;
-  display: flex;
 }
 
 .dark .default.dark, .default.dark .default-title h1, .default.dark .default-body{
   color: var(--cor2);
+}
+
+.light{
+  background-color: #ededed;
 }
 
 .flex{
@@ -445,6 +448,159 @@ header .container{
   transition-duration: .3s;
 }
 
+/* Secta seção - Happy Clients */
+
+#happy-clients .default-body{
+  justify-content: center;
+  flex-direction: column;
+}
 
 
 
+.client-area, .client-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client-info{
+  padding-top: 15px;
+}
+
+.client-info h1{
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.client-info h2{
+  padding-top: 5px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.client-review{
+  text-align: center;
+  padding-top: 40px;
+}
+
+.client-review p{
+  margin: auto;
+  max-width: 750px;
+  padding-top: 10px;
+  color: var(--cor6);
+  font-weight: 500;
+}
+
+/* Sétima seção - empresas */
+
+#empresas{
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+
+}
+
+#empresas .container{
+  padding: 40px;
+  justify-content: space-around;
+}
+
+
+/* oitava seção - Prices */
+
+#prices .default-body{
+  margin-top: 35px;
+}
+.price-table{
+  display: flex;
+}
+
+.price-area{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+  flex: 1;
+  background-color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+.price-area .button{
+  background-color: #373737;
+  padding: 10px 25px;
+  margin-top: 10px;
+
+  border: none;
+}
+
+.price-area .button:hover{
+  background-color: var(--cor1);
+  color: white;
+}
+
+.price-type h1{
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.price-title h1, .price-desc h2{
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.price-title h1{
+  font-size: 21px;
+}
+
+.price-desc h2{
+  color: var(--cor3);
+  font-size: 11px;
+}
+
+.price-type-desc{
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #7e7e7e;
+}
+
+/* Nona seção - Book */
+
+.book-area{
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 30px;
+}
+
+.book-feature-area{
+  display: flex;
+}
+
+.book-desc{
+  padding-left: 60px;
+}
+.book-feature-check{
+  margin-right: 15px;
+}
+
+.book-feature{
+  line-height: 30px;
+}
+
+.book-feature h1, .book-feature li{
+  text-transform: uppercase;
+}
+
+.book-feature h1{
+  font-size: 20px;
+  color: #242424;
+}
+.book-feature p, .book-feature ul{
+  color: var(--cor3);
+  font-size: 14px;
+}
+
+.book-feature li::before{
+  content: "-";
+}
