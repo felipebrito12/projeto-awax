@@ -70,6 +70,12 @@ header .container{
   display: none;
 }
 
+.menu-bar{
+  background-color: var(--cor1);
+  height: 5px;
+  margin: 10px 0;
+}
+
 .menu ul, li{ /*Alinha os links que estão na lista*/
   display: flex;
 }
@@ -196,9 +202,9 @@ header .container{
 
 
 .default{
+  margin: 10px;
   padding: 40px 0;
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: center;
 }
@@ -218,8 +224,7 @@ header .container{
 }
 
 .default-body{
-  margin-top: 50px;
-  width: 100%;
+  margin: 50px 10px;
 }
 
 .dark, .default.dark, .default.dark .default-title, .default.dark .default-body{
@@ -319,7 +324,7 @@ header .container{
 .projects-menu{
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 .projects-menu ul, .projects-menu li{
@@ -331,7 +336,7 @@ header .container{
   background-color: #ededed;
   border: 2px solid #cfcfcf ;
   border-radius: 30px;
-  padding: 0 20px;
+  padding: 0 1 0px;
 }
 
 .projects-menu li{
@@ -525,7 +530,6 @@ header .container{
 }
 
 #empresas .container{
-  padding: 15px;
   justify-content: space-around;
 }
 
@@ -595,7 +599,6 @@ header .container{
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #d8d8d8;
-  padding: 30px;
 }
 
 .book-feature-area{
@@ -726,12 +729,14 @@ header .container{
   display: flex;
   flex-wrap: wrap;
   max-width: 600px;
+  margin: 10px;
 }
 
 .form label{
   display: flex;
   flex-direction: column;
-  padding: 20px 30px;
+  padding: 0px 30px;
+  margin-top: 10px;
 }
 
 .form input{
@@ -887,7 +892,7 @@ footer .container{
   margin-top: 10px;
 }
 
-@media (min-width: 450px) and (max-width: 1000px){
+@media (max-width: 1000px){
 
   /* header e menu */
 
@@ -994,13 +999,14 @@ footer .container{
   }
 
   .price-area{
-    margin: 0;
+    margin: 5px;
     min-width: 50%;
   }
 
   #empresas .container{
     flex-wrap: wrap;
     justify-content: center;
+    margin: 10px;
   }
 
   .empresa-logo{
@@ -1014,5 +1020,100 @@ footer .container{
 
   .map-area{
     width: 100%;
+  }
+}
+
+@media (max-width: 530px) {
+  #about-us .default{
+    padding: 0;
+  }
+
+  #about-us .default-body{
+    padding: 0 10px;
+  }
+
+  .aboutus2{
+    width: auto ;
+  }
+
+  .services-box{
+    border: 0;
+  }
+
+  .workers-area:nth-child(2){
+    display: none ;
+  }
+
+  #redes .container{
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 0;
+  }
+  .services-box:first-child{
+    border: 0;
+  }
+}
+
+
+@media (max-width: 480px){
+  .home-content h1{
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  #services .default-body{
+    flex-direction: column;
+  }
+
+  .empresa-logo {
+    min-width: 40%;
+  }
+
+  .redes-area{
+    flex-wrap: wrap;
+  }
+
+  .redes-logo{
+    margin-top: 5px;
+  }
+
+  .book-area{
+    margin: 10px;
+  }
+
+  .book-photo{
+    display: flex;
+    width: 300px;
+  }
+
+  .book-photo img{
+    width: inherit;
+  }
+  #map .container{
+    padding: 0;
+  }
+  .map-area{
+    padding: 0;
+  }
+
+  footer .container{
+    padding: 0;
+    margin: 10px;
+  }
+  .projects-photo{
+    width: 300px;
+  }
+}
+
+@media (max-width: 320px){
+  .menu li a{
+    margin-left: 30px;
+    font-size: 20px;
+  }
+
+  .projects-photoarea{
+    width: 280px;
+    height: 180px;
   }
 }
