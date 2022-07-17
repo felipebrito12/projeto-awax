@@ -8,6 +8,7 @@
   box-sizing: border-box;
 
   font-family: "Montserrat", sans-serif;
+  outline: 0 ;
 }
 :root{
   --cor1: #b98a5c;
@@ -48,6 +49,7 @@ header .container{
   color: var(--cor1);
   width: 80px;
   height: 80px;
+  margin-left: 10px;
 
   justify-content: center;
   align-items: center;
@@ -61,6 +63,11 @@ header .container{
   display: flex;
   flex: 1;
   justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.menu-button{
+  display: none;
 }
 
 .menu ul, li{ /*Alinha os links que estão na lista*/
@@ -245,6 +252,11 @@ header .container{
   display: inline-flex;
 }
 
+#about-us .default{
+  padding: 0 0 0 10px;
+  margin-bottom: 10px;
+}
+
 .aboutus1{
   flex: 1;
 }
@@ -292,7 +304,7 @@ header .container{
 .services-box p{
   font-size: 14px;
   color: var(--cor6);
-  padding-top: 10px;
+  padding: 10px;
 }
 
 
@@ -411,14 +423,19 @@ header .container{
   background-color: transparent;
 }
 
+.team-area{
+  display: flex;
+  max-width: 100%;
+}
+
 
 
 .workers-area{
   background-color: #fff;
-  padding: 50px;
+  padding: 20px;
   color: #000;
   text-align: center;
-  margin: 10px;
+  margin-left: 10px;
 
   border-radius: 4px;
 }
@@ -508,7 +525,7 @@ header .container{
 }
 
 #empresas .container{
-  padding: 40px;
+  padding: 15px;
   justify-content: space-around;
 }
 
@@ -530,7 +547,7 @@ header .container{
   flex: 1;
   background-color: #fff;
   text-align: center;
-  padding: 30px;
+  padding: 10px;
 }
 
 .price-area .button{
@@ -811,6 +828,7 @@ footer .container{
 }
 .footer-area{
   flex: 1;
+  padding: 5px;
 }
 
 .footer-area p{
@@ -845,6 +863,7 @@ footer .container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 15px;
   border-radius: 5px;
 }
@@ -866,4 +885,134 @@ footer .container{
 .footer-email-area a{
   padding: 10px 20px;
   margin-top: 10px;
+}
+
+@media (min-width: 450px) and (max-width: 1000px){
+
+  /* header e menu */
+
+
+  .menu-button{
+    display: block;
+    width: 50px;
+    margin-right: 10px;
+  }
+  .menu nav{
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 80%;
+    height: calc(100vh - 100px);
+    top: 100px;
+    right: 0;
+  }
+
+  .menu ul{
+    flex-direction: column;
+  }
+
+  .menu li a{
+    font-weight: bold;
+    height: 80px;
+    margin-left: 50px;
+    font-size: 27px;
+  }
+
+  .menu a{
+    border: 0;
+  }
+  
+  .menu a:hover, a.selected{
+    border: 0;
+    color: var(--cor1);
+  }
+
+
+  /* about us */
+
+  #about-us .default{
+    margin-top: 10px;
+  }
+
+  #about-us .default-body{
+    flex-direction: column;
+  }
+
+  #about-us .default-body{
+    align-items: center;
+  }
+
+  .aboutus2{
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+
+  
+  /* out team */
+
+  .workers-area:last-child{
+    display: none;
+  }
+
+  /* services */
+
+  #services .default-body{
+    flex-wrap: wrap;
+  }
+
+  .services-box{
+    min-width: 50%;
+  }
+
+  /* some facts */
+
+  .facts-area{
+    flex-direction: column;
+  }
+
+  .facts-desc{
+    min-width: 50%;
+  }
+
+  /* book */
+
+  .book-area{
+    flex-direction: column;
+  }
+
+  .book-desc{
+    padding: 0;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px){
+  .price-table{
+    flex-wrap: wrap;
+  }
+
+  .price-area{
+    margin: 0;
+    min-width: 50%;
+  }
+
+  #empresas .container{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .empresa-logo{
+    min-width: 26%;
+    margin-top: 10px;
+  }
+
+  footer .container{
+    flex-direction: column;
+  }
+
+  .map-area{
+    width: 100%;
+  }
 }
