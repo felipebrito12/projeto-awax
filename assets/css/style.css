@@ -914,19 +914,17 @@ footer .container{
 
   .menu ul{
     flex-direction: column;
-    height: calc(100vh - 100px);
   }
 
   .menu li a{
     font-weight: bold;
-    height: 20px;
+    height: 80px;
     margin-left: 50px;
     font-size: 27px;
   }
 
   .menu a{
     border: 0;
-    margin: 10px;
   }
   
   .menu a:hover, a.selected{
